@@ -21,17 +21,25 @@ class App extends Component {
 			]
 		});
 	}
+	nameChangedHandler = (event) => {
+		this.setState({
+			persons: [
+				{name: 'Alvyn Abranches', age: 24},
+				{name: event.target.value, age: 28},
+			]
+		});
+	}
 	render() {
 		return (
-			<div className="App">
+			<div className="">
 				<h1 className="App-title">Welcome to React</h1>
 				<p>This is my first project</p>
 				<Person name={this.state.persons[0].name} age={this.state.persons[0].age} click={this.switchNameHandler}/>
- 				<Person name={this.state.persons[1].name} age={this.state.persons[1].age}/>
+ 				<Person name={this.state.persons[1].name} age={this.state.persons[1].age} changed={this.nameChangedHandler}/>
  				<Person name="Joy"/>
  				<Person age="20"/>
  				<Person />
- 				<button onClick={this.switchNameHandler}>Switch Name</button>
+ 				<button onClick={this.switchNameHandler.bind(this, 'Alvyn Abranches')}>Switch Name</button>
 				<div className="all-projects">
 					<Project title="Canteen Management System" desc="This project was a final year BSc (CS) project." details="Programming Language / Scripting Language / Markup Language / Styling Language -> PHP, HTML, CSS, JS. Frameworks -> jQuery, AJAX." />
 					<Project title="Machine Learning with Job Data" desc="Web-scrapping indeed.com data, I have found the best possible jobs in a locality. " details="Programming Language -> Python. Front-End -> Dash. ML/DL -> Classification and Regression Problem Statement."/>
