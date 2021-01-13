@@ -7,16 +7,31 @@ import { Project } from './Portfolio/Portfolio.js';
 import './App.css';
 
 class App extends Component {
-	runs = 5;
-	updateRuns = () => {
-		this.runs += 1;
-		console.log(this.runs);
+	state = {
+		persons: [
+			{name: 'Alvyn', age: 24},
+			{name: 'Max', age: 28},
+		]
+	}
+	switchNameHandler = (newName) => {
+		this.setState({
+			persons: [
+				{name: newName, age: 24},
+				{name: 'Maximilian', age: 28},
+			]
+		});
 	}
 	render() {
 		return (
 			<div className="App">
 				<h1 className="App-title">Welcome to React</h1>
 				<p>This is my first project</p>
+				<Person name={this.state.persons[0].name} age={this.state.persons[0].age} click={this.switchNameHandler}/>
+ 				<Person name={this.state.persons[1].name} age={this.state.persons[1].age}/>
+ 				<Person name="Joy"/>
+ 				<Person age="20"/>
+ 				<Person />
+ 				<button onClick={this.switchNameHandler}>Switch Name</button>
 				<div className="all-projects">
 					<Project title="Canteen Management System" desc="This project was a final year BSc (CS) project." details="Programming Language / Scripting Language / Markup Language / Styling Language -> PHP, HTML, CSS, JS. Frameworks -> jQuery, AJAX." />
 					<Project title="Machine Learning with Job Data" desc="Web-scrapping indeed.com data, I have found the best possible jobs in a locality. " details="Programming Language -> Python. Front-End -> Dash. ML/DL -> Classification and Regression Problem Statement."/>
