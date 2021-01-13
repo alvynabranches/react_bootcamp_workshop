@@ -13,7 +13,7 @@ class App extends Component {
 				<p>This is my first project</p>
 				<div className="all-projects">
 					<Project title="Machine Learning with Job Data" desc="Web-scrapping indeed.com data, I have found the best possible jobs in a locality. " details="Programming Language -> Python. Front-End -> Dash. ML/DL -> Classification and Regression Problem Statement."/>
-					<Project title="Machine Learning with Audio Data" desc="Generating new folk music using LSTMs." details="Programming Language -> Python. Front-End -> Django. Back-End -> Django. ML/DL -> LSTM, Auto Encoder, GANs"/>
+					<Project title="Music Generation using LSTMs, AEs and GANs" desc="Generating new folk music using LSTMs." details="Programming Language -> Python. Front-End -> Django. Back-End -> Django. ML/DL -> LSTM, Auto Encoder, GANs"/>
 				</div>
 			</div>
 		)
