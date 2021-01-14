@@ -1,4 +1,4 @@
-team1 = {
+t1 = {
     runs: 0,
     balls: 0,
     extras: 0,
@@ -26,7 +26,7 @@ team1 = {
     }
 }
 
-team2 = {
+t2 = {
     runs: 0,
     balls: 0,
     extras: 0,
@@ -54,4 +54,4 @@ team2 = {
     }
 }
 
-export { team1 as Team1, team2 as Team2 }
+export { t1 as Team1, t2 as Team2 }
