@@ -31,7 +31,7 @@ class App extends Component {
 	}
 	render() {
 		return (
-			<div className="">
+			<div className="App">
 				<h1 className="App-title">Welcome to React</h1>
 				<p>This is my first project</p>
 				<Person name={this.state.persons[0].name} age={this.state.persons[0].age} click={this.switchNameHandler}/>
