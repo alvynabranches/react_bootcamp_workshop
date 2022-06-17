@@ -4,7 +4,7 @@ const person = (props) => {
     if(props.name != null && props.age == null) {
         if(props.changed == null){
             return (
-                <div>
+                <div className="Person">
                     <p>I am a {props.name}. I am {Math.floor(Math.random()*30)} years old.</p>
                     <p>{props.children}</p>
                 </div>
@@ -12,7 +12,7 @@ const person = (props) => {
         }
         else{
             return (
-                <div>
+                <div className="Person">
                     <p>I am a {props.name}. I am {Math.floor(Math.random()*30)} years old.</p>
                     <p>{props.children}</p>
                     <input type="text" onChange={props.changed}></input>
@@ -22,7 +22,7 @@ const person = (props) => {
     }
     else if(props.name == null && props.age != null) {
         return (
-            <div>
+            <div className="Person">
                 <p>I am a person. I am {props.age} years old.</p>
                 <p>{props.children}</p>
             </div>
@@ -31,7 +31,7 @@ const person = (props) => {
     else if(props.name != null && props.age != null){
         if(props.changed == null) {
             return (
-                <div>
+                <div className="Person">
                     <p>I am a {props.name}. I am {props.age} years old.</p>
                     <p>{props.children}</p>
                 </div>
@@ -39,7 +39,7 @@ const person = (props) => {
         }
         else{
             return (
-                <div>
+                <div className="Person">
                     <p>I am a {props.name}. I am {props.age} years old.</p>
                     <p>{props.children}</p>
                     <input type="text" onChange={props.changed}></input>
@@ -49,7 +49,7 @@ const person = (props) => {
     }
     else {
         return (
-            <div>
+            <div className="Person">
                 <p>I am a person. I am {Math.floor(Math.random()*30)} years old.</p>
                 <p>{props.children}</p>
             </div>

@@ -29,7 +29,16 @@ class App extends Component {
 			]
 		});
 	}
+
 	render() {
+		const style = {
+			backgroundColor: 'white', 
+			font: 'inherit', 
+			border: '1px solid blue', 
+			padding: '8px', 
+			cursor: 'pointer', 
+		};
+		
 		return (
 			<div className="App">
 				<h1 className="App-title">Welcome to React</h1>
@@ -39,7 +48,7 @@ class App extends Component {
  				<Person name="Joy"/>
  				<Person age="20"/>
  				<Person />
- 				<button onClick={this.switchNameHandler.bind(this, 'Alvyn Abranches')}>Switch Name</button>
+ 				<button style={style} onClick={this.switchNameHandler.bind(this, 'Alvyn Abranches')}>Switch Name</button>
 				<div className="all-projects">
 					<Project title="Canteen Management System" desc="This project was a final year BSc (CS) project." details="Programming Language / Scripting Language / Markup Language / Styling Language -> PHP, HTML, CSS, JS. Frameworks -> jQuery, AJAX." />
 					<Project title="Machine Learning with Job Data" desc="Web-scrapping indeed.com data, I have found the best possible jobs in a locality. " details="Programming Language -> Python. Front-End -> Dash. ML/DL -> Classification and Regression Problem Statement."/>
